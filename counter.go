@@ -64,6 +64,7 @@ func TestUse() {
 	FuncCbFlush := counter.FuncCbFlush
 	counter.Incr("get.called", 123)
 	counter.Incr("get.called", 456)
+	//刷新
 	counter.Flush2Broker(5000, FuncCbFlush)
 	//每2s打印一次结果
 	for i := 0; i < 5; i++ {
